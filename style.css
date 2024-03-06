@@ -1,0 +1,709 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: #d4aa70 #e4e4e4;
+}
+
+.container::-webkit-scrollbar {
+  width: 0%;
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.slides {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  color: #fff;
+  scroll-snap-align: start;
+}
+
+
+.slides img {
+  width: 350px;
+  z-index: 2;
+}
+
+.slides h1 {
+  font-size: 60px;
+  font-weight: 550;
+}
+
+.paper {
+  width: 810px;
+  height: 100%;
+  padding: 35px;
+
+}
+
+.paper h2 {
+  font-size: 35px;
+}
+
+.paper p {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.paper ul {
+  font-size: 20px;
+  margin-left: 80px;
+}
+
+.paper li {
+  padding-bottom: 2px;
+}
+
+.slide1 h1 {
+  text-align: center;
+}
+
+.slide-in-elliptic-left-fwd {
+  -webkit-animation: slide-in-elliptic-left-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+  animation: slide-in-elliptic-left-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+
+
+@-webkit-keyframes slide-in-elliptic-left-fwd {
+  0% {
+    -webkit-transform: translateX(-800px) rotateY(30deg) scale(0);
+    transform: translateX(-800px) rotateY(30deg) scale(0);
+    -webkit-transform-origin: -100% 50%;
+    transform-origin: -100% 50%;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 1800px 50%;
+    transform-origin: 1800px 50%;
+    opacity: 0.2;
+  }
+}
+
+@keyframes slide-in-elliptic-left-fwd {
+  0% {
+    -webkit-transform: translateX(-800px) rotateY(30deg) scale(0);
+    transform: translateX(-800px) rotateY(30deg) scale(0);
+    -webkit-transform-origin: -100% 50%;
+    transform-origin: -100% 50%;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 1800px 50%;
+    transform-origin: 1800px 50%;
+    opacity: 1;
+  }
+}
+
+.text-flicker-in-glow {
+  -webkit-animation: text-flicker-in-glow 4s linear 2s both;
+  animation: text-flicker-in-glow 4s linear 2s both;
+}
+
+@-webkit-keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  55% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  57.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  65.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  77.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  86.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  55% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  57.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  65.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  77.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  86.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+
+
+.slide1 {
+  background-color: #2D112B;
+}
+
+.slide2 {
+  background-color: #421b15;
+
+}
+
+.cyber {
+  background-color: #2D112B;
+}
+
+.text {
+  background-color: #421b15;
+}
+
+.slide4 {
+  background-color: #2D112B;
+}
+
+.slide5 {
+  background-color: #421b15;
+}
+
+.slide6 {
+  background-color: #2D112B;
+}
+
+.slide7 {
+  background-color: #421b15;
+}
+
+.slide8 {
+  background-color: #2D112B;
+}
+
+.addition1 {
+  background-color: #421b15;
+}
+
+.addition2 {
+  background-color: #2D112B;
+}
+
+.slide9 {
+  background-color: #421b15;
+}
+
+.slide10 {
+  background-color: #2D112B;
+}
+
+.slide11 {
+  background-color: #421b15;
+}
+
+.text {
+  font-size: 25px;
+}
+
+.text p {
+  max-width: 500px;
+  text-align: center;
+}
+
+/*body{
+  width: 100vw;
+  height: 100vh;
+  background: #2D112B;
+  overflow: hidden;
+}
+*/
+#fscreen {
+  padding: 8px 12px;
+  background-color: transparent;
+  font-family: consolas;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 1.2em;
+  color: #fff;
+  position: absolute;
+  inset: auto 5% 5% auto;
+  cursor: pointer;
+  transition: .2s;
+  z-index: 1001;
+}
+
+#fscreen:hover {
+  text-shadow:
+    0 0 8px #fff,
+    0 0 16px #fff,
+    0 0 24px #fff;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+
+
+@media screen and (max-width: 768px) {
+  .slides {
+    gap: 10px;
+    /* Adjusted gap for smaller screens */
+  }
+
+  .slides h1 {
+    font-size: 6vw;
+    /* Adjusted font size for smaller screens */
+  }
+
+  .paper {
+    padding: 20px;
+    /* Adjusted padding for smaller screens */
+  }
+
+  .paper h2 {
+    font-size: 4vw;
+    /* Adjusted font size for smaller screens */
+  }
+
+  .paper p {
+    font-size: 3vw;
+    /* Adjusted font size for smaller screens */
+  }
+
+  .paper li {
+    font-size: 2.5vw;
+    /* Adjusted font size for smaller screens */
+  }
+
+  .paper ul {
+    margin-left: 3%;
+    /* Adjusted margin for smaller screens */
+  }
+
+  .slides img {
+    display: none;
+  }
+
+
+
+
+  .slide1 {
+    background-color: #2D112B;
+  }
+
+  .slide2 {
+    background-color: #421b15;
+
+  }
+
+  .cyber {
+    background-color: #2D112B;
+  }
+
+  .text {
+    background-color: #421b15;
+  }
+
+  .slide4 {
+    background-color: #2D112B;
+  }
+
+  .slide5 {
+    background-color: #421b15;
+  }
+
+  .slide6 {
+    background-color: #2D112B;
+  }
+
+  .slide7 {
+    background-color: #421b15;
+  }
+
+  .slide8 {
+    background-color: #2D112B;
+  }
+
+  .addition1 {
+    background-color: #421b15;
+  }
+
+  .addition2 {
+    background-color: #2D112B;
+  }
+
+  .slide9 {
+    background-color: #421b15;
+  }
+
+  .slide10 {
+    background-color: #2D112B;
+  }
+
+  .slide11 {
+    background-color: #421b15;
+  }
+
+  .slide11 .paper {
+    width: 100%;
+  }
+
+}
+
+/* Larger screens (e.g., tablets) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    font-size: 18px;
+    /* Adjusted font size for larger screens */
+  }
+
+  .slides h1 {
+    font-size: 40px;
+    /* Adjusted font size for larger screens */
+  }
+
+  .paper h2 {
+    font-size: 30px;
+    /* Adjusted font size for larger screens */
+  }
+
+  .paper p {
+    font-size: 19px;
+    /* Adjusted font size for larger screens */
+  }
+
+  .paper ul {
+    margin-left: 80px;
+    /* Reset margin for larger screens if needed */
+  }
+
+
+
+  .slide11 .paper {
+    width: 100%;
+  }
+}
+
+/* Extra-large screens (e.g., desktops) */
+@media screen and (min-width: 1025px) {
+  .container {
+    font-size: 20px;
+    /* Further adjusted font size for extra-large screens */
+  }
+
+  .slides h1 {
+    font-size: 50px;
+    /* Further adjusted font size for extra-large screens */
+  }
+
+  .paper h2 {
+    font-size: 40px;
+    /* Further adjusted font size for extra-large screens */
+  }
+
+  .paper p {
+    font-size: 20px;
+    /* Further adjusted font size for extra-large screens */
+  }
+
+  .paper ul {
+    margin-left: 120px;
+    /* Further adjusted margin for extra-large screens */
+  }
+
+  .slide11 .paper {
+    width: 100%;
+  }
+}
